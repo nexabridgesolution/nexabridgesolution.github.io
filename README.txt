@@ -1,35 +1,27 @@
-NexaBridge Solutions — Final SEO Update
+NexaBridge Solutions — Official Website Reference
 
-Upload/replace these three files in the root of the GitHub repository:
-https://github.com/nexabridgeops-max/nexabridge-website
+Production website:
+https://nexabridgesolution.github.io/
 
-Files:
-1. index.html
-2. sitemap.xml
-3. robots.txt
+Official GitHub repository:
+https://github.com/nexabridgesolution/nexabridgesolution.github.io
 
-They must be placed in the same root folder as the existing index.html.
+Google Search Console URL-prefix property:
+https://nexabridgesolution.github.io/
 
-After uploading:
-- Commit changes in GitHub.
-- Open the live website and confirm it loads normally.
-- In Google Search Console, inspect:
-  https://nexabridgeops-max.github.io/nexabridge-website/
-- Click Request Indexing only if the page is shown as changed / re-crawl is desired.
-- The sitemap is already configured at:
-  https://nexabridgeops-max.github.io/nexabridge-website/sitemap.xml
+SEO and indexable pages:
+- Home: https://nexabridgesolution.github.io/
+- Updates: https://nexabridgesolution.github.io/updates.html
+- Sitemap: https://nexabridgesolution.github.io/sitemap.xml
+- Robots: https://nexabridgesolution.github.io/robots.txt
 
-This SEO package includes:
-- Search-optimized title
-- Meta description
-- Canonical URL
-- Robots indexing directive
-- Open Graph metadata
-- Twitter/X metadata
-- Organization schema
-- WebSite schema
-- Founder information
-- LinkedIn sameAs reference
-- Updated sitemap
-- robots.txt
-- Removal of obsolete Netlify Identity script
+Contact form: Formspree (form ID xrpplgra), with a branded thank-you page.
+LinkedIn feed: SociableKIT widget ID 25721986 embedded in homepage Updates section.
+
+Website and GitHub repository references above are the active ones.
+The former repository nexabridgeops-max/nexabridge-website was deleted.
+Do not use or republish links from that former repository.
+
+When editing SEO metadata, keep canonical URLs and Sitemap URLs on
+https://nexabridgesolution.github.io/. Preserve the existing contact form,
+LinkedIn embed, verification files, and original visual design.
