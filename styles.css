@@ -234,8 +234,3 @@ h1 span{color:var(--teal)}
 .updates-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
 @media (max-width:980px){.updates-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:760px){.updates-grid{grid-template-columns:1fr}}
-
-.form-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.form-copy-button{border:0;background:transparent;color:var(--teal);font:inherit;font-size:14px;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:10px 2px}
-.form-copy-button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
-@media(max-width:600px){.form-actions{align-items:stretch;flex-direction:column}.form-actions .btn{width:100%}}
