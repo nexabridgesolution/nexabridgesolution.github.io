@@ -323,8 +323,12 @@
           </div>
           <label>Email<input type="email" name="email" placeholder="Your email address" autocomplete="email" required></label>
           <label>Message<textarea name="message" rows="5" placeholder="How can we help you?" required></textarea></label>
-          <button class="btn btn-primary" type="submit" id="submitButton">Send Message</button>
-          <p class="form-note" id="formNote" role="status" aria-live="polite">If the form service is unavailable, please email us directly at <a href="mailto:nexabridgeops@gmail.com?subject=NexaBridge%20Website%20Inquiry">nexabridgeops@gmail.com</a>. A successful submission is not confirmed until you see the confirmation page.</p>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" id="submitButton">Continue in Gmail</button>
+            <button class="btn btn-secondary" type="button" id="emailAppButton">Use Email App</button>
+            <button class="form-copy-button" type="button" id="copyContactButton">Copy Message</button>
+          </div>
+          <p class="form-note" id="formNote" role="status" aria-live="polite">For now, this form opens a pre-filled email draft instead of the unavailable FormSubmit server. Please review your draft and press <strong>Send</strong> in your email account; opening a draft alone does not send the message. You can also write to <a href="mailto:nexabridgeops@gmail.com">nexabridgeops@gmail.com</a>.</p>
         </form>
       </div>
     </section>
