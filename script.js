@@ -39,7 +39,7 @@ async function loadNexaBridgeUpdates(limit = 3, targetId = 'updatesGrid') {
       <article class="update-card reveal is-visible">
         ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
         <div class="update-card-body">
-          <p class="update-date">${new Date(post.date + 'T00:00:00').toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})}</p>
+          <p class="update-date">${new Date(post.date).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})}</p>
           <h3>${post.title}</h3>
           <p>${post.excerpt || ''}</p>
           ${post.linkedin_url ? `<a class="update-link" href="${post.linkedin_url}" target="_blank" rel="noopener noreferrer">View on LinkedIn →</a>` : ''}
