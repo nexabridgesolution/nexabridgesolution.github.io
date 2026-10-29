@@ -50,3 +50,52 @@ async function loadNexaBridgeUpdates(limit = 3, targetId = 'updatesGrid') {
   }
 }
 loadNexaBridgeUpdates();
+
+
+/* NexaBridge custom thank-you redirect: only after a confirmed Formspree response. */
+const nexaInquiryForm = document.getElementById('contactForm');
+if (nexaInquiryForm) {
+  const sendButton = document.getElementById('submitButton');
+  const formNote = document.getElementById('formNote');
+  let sending = false;
+
+  nexaInquiryForm.addEventListener('submit', async (event) => {
+    if (typeof fetch !== 'function') return; // Keep native POST fallback.
+    event.preventDefault();
+    if (sending || !nexaInquiryForm.reportValidity()) return;
+    sending = true;
+    if (sendButton) {
+      sendButton.disabled = true;
+      sendButton.textContent = 'Sending...';
+    }
+    if (formNote) formNote.textContent = 'Sending your message securely...';
+
+    try {
+      const response = await fetch(nexaInquiryForm.action, {
+        method: 'POST',
+        body: new FormData(nexaInquiryForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        window.location.assign(new URL('thank-you.html', document.baseURI).href);
+        return;
+      }
+      let result = null;
+      try { result = await response.json(); } catch (_) {}
+      const errors = result && Array.isArray(result.errors)
+        ? result.errors.map(error => error.message).filter(Boolean).join(' ')
+        : '';
+      if (formNote) formNote.textContent = errors ||
+        'Message not sent. Please try again, or email nexabridgeops@gmail.com directly.';
+    } catch (_) {
+      if (formNote) formNote.textContent =
+        'Could not confirm delivery. Please check your connection before trying again, or email nexabridgeops@gmail.com.';
+    } finally {
+      sending = false;
+      if (sendButton) {
+        sendButton.disabled = false;
+        sendButton.textContent = 'Send Message';
+      }
+    }
+  });
+}
